@@ -17,8 +17,8 @@ export interface TestSuite {
   $: {
     name: string
     tests: string
-    errors: string
-    failures: string
+    executed: string
+    failed: string
     skipped: string
     time: string
     timestamp?: Date
@@ -33,8 +33,8 @@ export interface TestCase {
     name: string
     time: string
   }
-  failure?: string | Failure[]
-  error?: string | Failure[]
+  failed?: string | Failure[]
+  executed?: string | Failure[]
   skipped?: string[]
 }
 
